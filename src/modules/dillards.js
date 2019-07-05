@@ -116,7 +116,7 @@ class DillardsScraper extends Scraper {
     }
 
     async next_page() {
-        let next_page_link = await this.page.$('.pagination-wrapper span span span span span span span', {timeout: 1000});
+        let next_page_link = await this.page.$('.pagination__wrapper span span span span span span span', {timeout: 1000});
         if (!next_page_link) {
             return false;
         }
