@@ -18,16 +18,10 @@ class DillardsScraper extends Scraper {
 
             let resobj = {};
             try {
-                resobj.image = $(product).find('[result-tile-above] a').attr('href');
+                resobj.image = $(product).find('result-tile-above a').attr('href');
             } catch (err) {
             }
 
-
-
-            try {
-                resobj.link = $(product).find('[ShopNewArrivals]a').attr('href');
-            } catch (err) {
-            }
 
             try {
                 resobj.title = $(product).find('.productName').text();
@@ -53,7 +47,7 @@ class DillardsScraper extends Scraper {
 
         const cleaned = [];
         for (var res of results) {
-            if (res.link && res.link.trim() && res.title && res.title.trim() && res.price && res.price.trim() && res.stars.trim()) {
+            if (res.title && res.title.trim() && res.price && res.price.trim()) {
                 res.rank = this.result_rank++;
                 cleaned.push(res);
             }
