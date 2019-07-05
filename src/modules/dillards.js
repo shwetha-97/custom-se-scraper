@@ -33,12 +33,6 @@ class DillardsScraper extends Scraper {
                 resobj.title = $(product).find('.productName').text();
             } catch (err) {
             }
-
-            try {
-                resobj.stars = $(product).find('.sr-only').text();
-            } catch (err) {
-            }
-
             
 
             try {
