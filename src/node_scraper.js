@@ -5,12 +5,13 @@ const google = require('./modules/google.js');
 const amazon = require('./modules/amazon.js');
 const bing = require('./modules/bing.js');
 const baidu = require('./modules/baidu.js');
+const dillards = require('./modules/dillards.js');
 const infospace = require('./modules/infospace.js');
 const youtube = require('./modules/youtube.js');
 const ua = require('./modules/user_agents.js');
 const duckduckgo = require('./modules/duckduckgo.js');
 const tickersearch = require('./modules/ticker_search.js');
-const { Cluster } = require('./puppeteer-cluster/src/index.ts');
+const { Cluster } = require('./puppeteer-cluster/src/index.js');
 const common = require('./modules/common.js');
 var log = common.log;
 
@@ -44,6 +45,7 @@ function getScraper(search_engine, args) {
             bing: bing.BingScraper,
             bing_news: bing.BingNewsScraper,
             amazon: amazon.AmazonScraper,
+            dillards: dillards.DillardsScraper,
             duckduckgo: duckduckgo.DuckduckgoScraper,
             duckduckgo_news: duckduckgo.DuckduckgoNewsScraper,
             infospace: infospace.InfospaceScraper,
