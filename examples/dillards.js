@@ -6,7 +6,7 @@ const se_scraper = require('./../src/node_scraper.js');
         debug_level: 1,
         output_file: 'examples/results/dillards.json',
         dillards_settings: {
-            amazon_domain: 'dillards.com',
+            dillards_domain: 'dillards.com',
         }
     };
 
